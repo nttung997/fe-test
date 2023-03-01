@@ -25,27 +25,27 @@
 
     <div class="d-flex p-2">
       <div class="col-3 px-2">
-        <img src="@/assets/icons/transactions.svg" alt="" />
+        <img src="@/assets/icons/manage-cards.svg" alt="" />
       </div>
       <div>Manage Cards</div>
     </div>
 
     <div class="d-flex p-2">
       <div class="col-3 px-2">
-        <img src="@/assets/icons/transactions.svg" alt="" />
+        <img src="@/assets/icons/deposit-money.svg" alt="" />
       </div>
       <div>Deposit Money</div>
     </div>
 
     <div class="d-flex p-2">
       <div class="col-3 px-2">
-        <img src="@/assets/icons/transactions.svg" alt="" />
+        <img src="@/assets/icons/convert-money.svg" alt="" />
       </div>
       <div>Convert Money</div>
     </div>
     <div class="d-flex p-2">
       <div class="col-3 px-2">
-        <img src="@/assets/icons/transactions.svg" alt="" />
+        <img src="@/assets/icons/live-chat.svg" alt="" />
       </div>
       <div>Live Chat</div>
     </div>
@@ -57,7 +57,6 @@
 
 export default {
   name: "LeftMenu",
-  components: {},
 };
 </script>
 <style lang="scss" scoped>

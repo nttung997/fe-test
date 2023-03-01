@@ -1,19 +1,17 @@
 <template>
-  <div class="row h-100">
-    <div class="col-3 h-100">
-    <Menu />
-    </div>
+  <div class="d-flex align-items-center justify-content-center">
+    <MainContent></MainContent>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Menu from "@/components/currency_exchange/LeftMenu.vue";
+import MainContent from "@/components/currency_exchange/MainContent.vue";
 
 export default {
-  name: "HomeView",
+  name: "CurrencyExchange",
   components: {
-    Menu,
+    MainContent,
   },
 };
 </script>

@@ -1,8 +1,23 @@
 <template>
-  <div id="app" >
-    <router-view/>
+  <div id="app">
+    <div class="row h-100">
+      <div class="col-3 h-100">
+        <LeftMenu></LeftMenu>
+      </div>
+      <div class="col-9 h-100">
+        <router-view />
+      </div>
+    </div>
   </div>
 </template>
+<script>
+import LeftMenu from "@/components/currency_exchange/LeftMenu.vue";
+export default {
+  components: {
+    LeftMenu,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
