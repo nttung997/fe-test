@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div class="row h-100">
-      <div class="col-3 h-100">
+    <div class="d-flex h-100">
+      <div class="col-3 h-100 p-0">
         <LeftMenu></LeftMenu>
       </div>
       <div class="col-9 h-100">

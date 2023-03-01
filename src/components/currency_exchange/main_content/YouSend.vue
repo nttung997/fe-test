@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <div>
+  <div class="d-flex">
+    <div class="d-flex">
       <div>
-        <img src="@/assets/icons/US.svg" alt="">
+        <img src="@/assets/icons/US.svg" alt="" />
       </div>
       <div>{{ balance }}</div>
-      <div>icon</div>
+      <!-- <div>icon</div> -->
     </div>
     <div>
       <b-form-input v-model="youSend" placeholder="You send"></b-form-input>
@@ -20,10 +20,10 @@ export default {
     ...mapState({
       balance: (state) => state.user.balance,
     }),
-    
+
     youSend: {
       get() {
-        return this.$store.state.filterForm.youSend;
+        return this.$store.state.currencyExchange.youSend;
       },
       set(value) {
         this.$store.commit("currencyExchange/setState", {

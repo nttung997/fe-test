@@ -1,19 +1,31 @@
-import axios from "axios";
+// import axios from "axios";
+
+const CONVERSION_RATE = {
+  EUR: 0.815894,
+  CAD: 1.204355,
+  GBP: 0.70602,
+  MXN: 19.88162,
+  PLN: 3.66121
+}
 
 const state = {
-  all: {
-    data: []
-  },
-  status: '',
+  conversionRate: null,
+  status: null,
 }
 
 const actions = {
-  getAll({ commit }, { branchID, data }) {
+  getConversionRate({ commit }) {
     return new Promise((resolve, reject) => {
       commit('loading')
-      axios.get(`branches/${branchID}/conversions`, { params: data }).then(response => {
-        commit('getAll', response.data)
-        resolve(response.data)
+      //  let mockPromise = axios.get(`user`)
+      let mockPromise = new Promise(function (resolve) {
+        setTimeout(resolve, 100);
+      })
+      mockPromise.then(() => {
+        commit('success', {
+          key: 'conversionRate', value: CONVERSION_RATE
+        })
+        resolve(56443)
       }).catch(error => {
         commit('error')
         reject(error)
