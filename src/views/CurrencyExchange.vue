@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <div class="col-3">
+  <div class="row h-100">
+    <div class="col-3 h-100">
     <Menu />
     </div>
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 // @ is an alias to /src
-import Menu from "@/components/currency_exchange/Menu.vue";
+import Menu from "@/components/currency_exchange/LeftMenu.vue";
 
 export default {
   name: "HomeView",
