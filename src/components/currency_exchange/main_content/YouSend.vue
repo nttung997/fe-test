@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex">
-    <div class="d-flex">
-      <div class="px-3">
+    <div class="d-flex  shadow rounded p-3">
+      <div class="px-3 align-self-center">
         <img src="@/assets/icons/US.svg" alt="" />
       </div>
       <div>
@@ -10,7 +10,7 @@
       </div>
       <!-- <div>icon</div> -->
     </div>
-    <div class="px-3">
+    <div class="px-3 shadow rounded ml-3 align-items-center d-flex">
       <b-form-input
         v-model="youSend"
         placeholder="You send"
@@ -37,7 +37,6 @@ export default {
       },
       set(value) {
         let amount = Math.round(value * 100);
-        console.log(amount < this.balance);
         this.$store.commit("currencyExchange/setState", {
           key: "youSend",
           value: amount < this.balance ? amount : this.balance,

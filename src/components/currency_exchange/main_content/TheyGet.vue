@@ -1,16 +1,16 @@
 <template>
   <div class="d-flex">
-    <div class="d-flex">
-      <div class="px-3">
+    <div class="d-flex shadow rounded p-3">
+      <div class="px-3 align-self-center">
         <img :src="getImgUrl()" alt="" />
       </div>
+      <b-form-select v-model="selected" :options="options"></b-form-select>
     </div>
 
-    <b-form-select v-model="selected" :options="options"></b-form-select>
-
-    <div class="px-3">
+    <div class="px-3 shadow rounded ml-3 align-items-center d-flex">
       <b-form-input
         :value="(theyGet / 100) | moneyFormater"
+        readonly
         placeholder="Recipient Gets"
       ></b-form-input>
     </div>
@@ -36,8 +36,12 @@ export default {
     options() {
       let result = [];
       Object.keys(this.conversionRate).forEach(function (key) {
-        let src = require(`@/assets/icons/${key}.svg`)
-        result.push({html: `<img src="${src}"/> ` + key, value: key, text: key });
+        let src = require(`@/assets/icons/${key}.svg`);
+        result.push({
+          html: `<img src="${src}"/> ` + key,
+          value: key,
+          text: key,
+        });
       });
       return result;
     },
@@ -53,7 +57,6 @@ export default {
         });
       },
     },
-
   },
   methods: {
     getImgUrl() {
