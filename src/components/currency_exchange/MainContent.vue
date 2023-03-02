@@ -1,18 +1,18 @@
 <template>
   <div>
-    <div>
+    <div class="my-3">
       <YouSend></YouSend>
     </div>
-    <div>
+    <div class="my-3">
       <FeesAndRate></FeesAndRate>
     </div>
-    <div>
+    <div class="my-3">
       <TheyGet></TheyGet>
     </div>
-    <div>
+    <div class="my-3">
       <MessageBox></MessageBox>
     </div>
-    <div>
+    <div class="my-3">
       <FooterButtons></FooterButtons>
     </div>
   </div>

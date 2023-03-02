@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import axios from "axios";
 
 const CONVERSION_RATE = {
@@ -9,15 +10,18 @@ const CONVERSION_RATE = {
 }
 
 const state = {
-  conversionRate: null,
+  conversionRate: {},
   status: null,
+}
+
+const getters = {
+
 }
 
 const actions = {
   getConversionRate({ commit }) {
     return new Promise((resolve, reject) => {
       commit('loading')
-      //  let mockPromise = axios.get(`user`)
       let mockPromise = new Promise(function (resolve) {
         setTimeout(resolve, 100);
       })
@@ -45,18 +49,11 @@ const mutations = {
   error(state) {
     state.status = 'error'
   },
-  getAll(state, conversions) {
-    state.status = 'success'
-    if (conversions.current_page > 1) {
-      let data = state.all.data
-      conversions.data = data.concat(conversions.data)
-    }
-    state.all = conversions
-  },
 }
 export default {
   namespaced: true,
   state,
+  getters,
   actions,
   mutations
 }

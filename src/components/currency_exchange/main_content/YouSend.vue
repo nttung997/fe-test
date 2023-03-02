@@ -1,21 +1,31 @@
 <template>
   <div class="d-flex">
     <div class="d-flex">
-      <div>
+      <div class="px-3">
         <img src="@/assets/icons/US.svg" alt="" />
       </div>
-      <div>{{ balance }}</div>
+      <div>
+        <div>{{ (balance / 100) | moneyFormater }}</div>
+        <div>Available</div>
+      </div>
       <!-- <div>icon</div> -->
     </div>
-    <div>
-      <b-form-input v-model="youSend" placeholder="You send"></b-form-input>
+    <div class="px-3">
+      <b-form-input
+        v-model="youSend"
+        placeholder="You send"
+        type="number"
+        :max="balance / 100"
+      ></b-form-input>
     </div>
   </div>
 </template>
 <script>
+import moneyFormater from "@/mixins/moneyFormater";
 import { mapState } from "vuex";
 
 export default {
+  mixins: [moneyFormater],
   computed: {
     ...mapState({
       balance: (state) => state.user.balance,
@@ -23,12 +33,14 @@ export default {
 
     youSend: {
       get() {
-        return this.$store.state.currencyExchange.youSend;
+        return this.$store.state.currencyExchange.youSend / 100;
       },
       set(value) {
+        let amount = Math.round(value * 100);
+        console.log(amount < this.balance);
         this.$store.commit("currencyExchange/setState", {
           key: "youSend",
-          value: value,
+          value: amount < this.balance ? amount : this.balance,
         });
       },
     },

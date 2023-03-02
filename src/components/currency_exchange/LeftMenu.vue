@@ -1,7 +1,9 @@
 <template>
   <div class="h-100 menu text-off-white overflow-auto">
-    <div class="p-2">
-      <div class=""></div>
+    <div class="p-2 step d-flex">
+      <div class="pl-2 pr-3 align-self-center">
+        <img src="@/assets/icons/progress-bar.svg" alt="">
+      </div>
       <div>
         <div class="d-flex">STEP 02</div>
         <div class="d-flex">Specify Amount</div>
@@ -9,42 +11,42 @@
       <div class=""></div>
     </div>
 
-    <div class="d-flex p-2">
-      <div class="col-3 px-2">
+    <div class="d-flex pt-4">
+      <div class="px-3">
         <img src="@/assets/icons/my-account.svg" alt="" />
       </div>
       <div>My Accounts</div>
     </div>
 
-    <div class="d-flex p-2">
-      <div class="col-3 px-2">
+    <div class="d-flex pt-4">
+      <div class="px-3">
         <img src="@/assets/icons/transactions.svg" alt="" />
       </div>
       <div>Transactions</div>
     </div>
 
-    <div class="d-flex p-2">
-      <div class="col-3 px-2">
+    <div class="d-flex pt-4">
+      <div class="px-3">
         <img src="@/assets/icons/manage-cards.svg" alt="" />
       </div>
       <div>Manage Cards</div>
     </div>
 
-    <div class="d-flex p-2">
-      <div class="col-3 px-2">
+    <div class="d-flex pt-4">
+      <div class="px-3">
         <img src="@/assets/icons/deposit-money.svg" alt="" />
       </div>
       <div>Deposit Money</div>
     </div>
 
-    <div class="d-flex p-2">
-      <div class="col-3 px-2">
+    <div class="d-flex pt-4">
+      <div class="px-3">
         <img src="@/assets/icons/convert-money.svg" alt="" />
       </div>
       <div>Convert Money</div>
     </div>
-    <div class="d-flex p-2">
-      <div class="col-3 px-2">
+    <div class="d-flex pt-4">
+      <div class="px-3">
         <img src="@/assets/icons/live-chat.svg" alt="" />
       </div>
       <div>Live Chat</div>
@@ -65,5 +67,8 @@ export default {
 }
 .text-off-white {
   color: #cad5f9;
+}
+.step{
+  background: #2A2E94;
 }
 </style>
